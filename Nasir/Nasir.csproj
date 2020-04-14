@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A52F35C9-63E2-4213-96A4-B192DAFAE70E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>Nasir</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="appliance.cs" />
+    <Compile Include="DB\DbUser.cs" />
+    <Compile Include="DB\DbExercise.cs" />
+    <Compile Include="DB\DbOrder.cs" />
+    <Compile Include="forms\ExerciseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ExerciseForm.Designer.cs">
+      <DependentUpon>ExerciseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\CustomerForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\CustomerForm1.Designer.cs">
+      <DependentUpon>CustomerForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DbAppliance.cs" />
+    <Compile Include="DB\DbCustomer.cs" />
+    <Compile Include="forms\workstation\addworkstation1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\workstation\addworkstation1.Designer.cs">
+      <DependentUpon>addworkstation1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\ApplianceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ApplianceForm.Designer.cs">
+      <DependentUpon>ApplianceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DbCoach.cs" />
+    <Compile Include="forms\CoachForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\CoachForm.Designer.cs">
+      <DependentUpon>CoachForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\workstation\RemoveWorkStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\workstation\RemoveWorkStation.Designer.cs">
+      <DependentUpon>RemoveWorkStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\workstation\searchworkstation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\workstation\searchworkstation.Designer.cs">
+      <DependentUpon>searchworkstation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\workstation\ShowWorkStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\workstation\ShowWorkStation.Designer.cs">
+      <DependentUpon>ShowWorkStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\TrainingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TrainingForm.Designer.cs">
+      <DependentUpon>TrainingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\workstation\UpdateWorkStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\workstation\UpdateWorkStation.Designer.cs">
+      <DependentUpon>UpdateWorkStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\workstation\Workstation1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\workstation\Workstation1.Designer.cs">
+      <DependentUpon>Workstation1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach.cs" />
+    <Compile Include="customer.cs" />
+    <Compile Include="DB\Db.cs" />
+    <Compile Include="Exercise.cs" />
+    <Compile Include="gym.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gym.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="forms\mainpage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\mainpage.Designer.cs">
+      <DependentUpon>mainpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs" />
+    <Compile Include="forms\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\TrainingDb.cs" />
+    <Compile Include="ReportCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportCoach.Designer.cs">
+      <DependentUpon>ReportCoach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportCustomer.Designer.cs">
+      <DependentUpon>ReportCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tranning2.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="forms\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkStation.cs" />
+    <EmbeddedResource Include="forms\ExerciseForm.resx">
+      <DependentUpon>ExerciseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\CustomerForm1.resx">
+      <DependentUpon>CustomerForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\workstation\addworkstation1.resx">
+      <DependentUpon>addworkstation1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ApplianceForm.resx">
+      <DependentUpon>ApplianceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\CoachForm.resx">
+      <DependentUpon>CoachForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\workstation\RemoveWorkStation.resx">
+      <DependentUpon>RemoveWorkStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\workstation\searchworkstation.resx">
+      <DependentUpon>searchworkstation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\workstation\ShowWorkStation.resx">
+      <DependentUpon>ShowWorkStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\TrainingForm.resx">
+      <DependentUpon>TrainingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\workstation\UpdateWorkStation.resx">
+      <DependentUpon>UpdateWorkStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\workstation\Workstation1.resx">
+      <DependentUpon>Workstation1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\mainpage.resx">
+      <DependentUpon>mainpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCoach.resx">
+      <DependentUpon>ReportCoach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCustomer.resx">
+      <DependentUpon>ReportCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="gym.xsc">
+      <DependentUpon>gym.xsd</DependentUpon>
+    </None>
+    <None Include="gym.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gym.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gym.xss">
+      <DependentUpon>gym.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Gym.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Gym_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Gym.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
