@@ -14,8 +14,9 @@ namespace WindowsFormsApplication1
         private DataSet ds = new DataSet();
         public DbUser()
         {
-            cnn.ConnectionString = @"Data Source=.\SQLExpress;Integrated Security=true; 
-                                  AttachDbFilename=C:\Nasir\Nasir\Gym.MDF;User Instance=true";
+            string path = System.IO.Directory.GetCurrentDirectory() + "\\Gym.MDF";
+            cnn.ConnectionString = string.Format(@"Data Source=.\SQLExpress;Integrated Security=true; 
+                                  AttachDbFilename={0};User Instance=true", path);
         }
         public DataSet GetAllUser()
         {
