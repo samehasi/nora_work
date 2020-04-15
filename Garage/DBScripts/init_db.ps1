@@ -1,4 +1,9 @@
 ﻿
+param(
+        [Parameter(Mandatory)]
+        [string]$db_path
+    )
+
 
 #Action of connecting to the Database and executing the query and returning results if there were any.
 $conn=New-Object System.Data.SqlClient.SQLConnection
@@ -10,6 +15,7 @@ $Query = "select * from [dbo].[user]"
 
 $conn.ConnectionString=$ConnectionString
 $conn.Open()
+
 
 
 $sqltoexecute = Get-Content("d:\work\Nora\workspace\nora_work\Garage\DBScripts\FillDb.sql");

@@ -101,6 +101,14 @@ namespace WindowsFormsApplication1
             return ds;
         }
 
+        public DataSet GetClientInfo(Client w)
+        {
+            DataSet ds = new DataSet();
+            string SqlStr = string.Format("select * from Clients where ClientId={0}", w.Id);
+            ds = ReturnDS(SqlStr);
+            return ds;
+        }
+
         public bool Found(int IdWorkStation)
         {
             DataSet ds = new DataSet();
@@ -130,7 +138,14 @@ namespace WindowsFormsApplication1
             string SqlStr = string.Format("update workstation  set  name='{0}' ,amount={1}, place='{2}', floor='{3}' where IdWorkStation={4}", w.name, w.amount, w.place, w.floor, w.idworkstation);
             InsDelUpd(SqlStr);
         }
-          
+
+
+        public void UpdateClient(Client w)
+        {
+            string SqlStr = string.Format("update Clients  set  FirstName='{0}' ,LastName='{1}', Address='{2}', Phone='{3}' where ClientId={4}", w.FirstName, w.LastName, w.Address, w.Phone, w.Id);
+            InsDelUpd(SqlStr);
+        }
+
         public void InsDelUpd(string SqlStr)
         {
             /*          טענת כניסה: הפונקציה מקבלת מחרוזת פקודה
@@ -199,6 +214,46 @@ namespace WindowsFormsApplication1
                 MessageBox.Show(ex.Message);
             }
            
+            return ds;
+        }
+
+
+
+        public DataSet SearchClientbyId(int ClientId)
+        {
+            DataSet ds = new DataSet();
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cmd.CommandText = string.Format("select * from Clients where ClientId={0}", ClientId);
+                cmd.Connection = cnn;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(ds);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return ds;
+        }
+
+        public DataSet SearchClientbyName(string name)
+        {
+            DataSet ds = new DataSet();
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cmd.CommandText = string.Format("select * from Clients where (FirstNAme LIKE '%{0}%' OR LastName like '%{0}%'  )", name);
+                cmd.Connection = cnn;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(ds);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             return ds;
         }
 

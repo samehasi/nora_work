@@ -24,12 +24,14 @@ namespace WindowsFormsApplication1.forms.Client
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
+            SearchClient frm = new SearchClient();
+            frm.Show();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            UpdateClient frm = new UpdateClient();
+            frm.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
