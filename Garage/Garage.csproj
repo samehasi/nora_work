@@ -65,6 +65,42 @@
     <Compile Include="DB\DbUser.cs" />
     <Compile Include="DB\DbExercise.cs" />
     <Compile Include="DB\DbOrder.cs" />
+    <Compile Include="forms\Client\AddClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Client\AddClient.Designer.cs">
+      <DependentUpon>AddClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Client\Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Client\Clients.Designer.cs">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Client\RemoveClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Client\RemoveClient.Designer.cs">
+      <DependentUpon>RemoveClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Client\SearchClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Client\SearchClient.Designer.cs">
+      <DependentUpon>SearchClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Client\ShowClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Client\ShowClients.Designer.cs">
+      <DependentUpon>ShowClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Client\UpdateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Client\UpdateClient.Designer.cs">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\ExerciseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +222,24 @@
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkStation.cs" />
+    <EmbeddedResource Include="forms\Client\AddClient.resx">
+      <DependentUpon>AddClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Client\Clients.resx">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Client\RemoveClient.resx">
+      <DependentUpon>RemoveClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Client\SearchClient.resx">
+      <DependentUpon>SearchClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Client\ShowClients.resx">
+      <DependentUpon>ShowClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Client\UpdateClient.resx">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\ExerciseForm.resx">
       <DependentUpon>ExerciseForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -63,9 +63,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Location = new System.Drawing.Point(38, 438);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 43);
+            this.label1.Size = new System.Drawing.Size(99, 43);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Customer";
+            this.label1.Text = "Clients";
             // 
             // label2
             // 
@@ -90,6 +90,7 @@
             this.label3.Size = new System.Drawing.Size(136, 43);
             this.label3.TabIndex = 3;
             this.label3.Text = "Appliance";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -127,6 +128,7 @@
             this.label7.Size = new System.Drawing.Size(90, 43);
             this.label7.TabIndex = 7;
             this.label7.Text = "Order";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -262,7 +264,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(749, 688);
+            this.ClientSize = new System.Drawing.Size(1051, 688);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox7);

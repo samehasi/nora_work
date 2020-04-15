@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
             SqlCommand cmd = new SqlCommand();
             try
             {
-                cmd.CommandText = "select IdCustomer,FirstName,LastName,City,Street,'Picture1',Date,DateStart,DateEnd,Age,pelephoneNumber,idCoach from Customer";
+                cmd.CommandText = "select * from Clients";
                 cmd.Connection = cnn;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(ds);
@@ -45,7 +45,7 @@ namespace WindowsFormsApplication1
             SqlCommand cmd = new SqlCommand();
             try
             {
-                cmd.CommandText = "select * from Customer";
+                cmd.CommandText = "select * from Clients";
                 cmd.Connection = cnn;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);

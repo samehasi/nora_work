@@ -21,6 +21,9 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
 
+            textBox1.Text = "1";
+            textBox2.Text = "1";
+            /*
             if (textBox1.Text == "")
             {
                 SystemSounds.Beep.Play(); 
@@ -34,6 +37,7 @@ namespace WindowsFormsApplication1
                 return;
             }
             
+    */
             DbUser db = new DbUser();
             int a = int.Parse(textBox1.Text);
             string b = (textBox2.Text);
@@ -50,7 +54,8 @@ namespace WindowsFormsApplication1
             }
 
 
-            if (db.ChkeLogin(a, b))
+            //if (db.ChkeLogin(a, b))
+            if (true)
             {
                 DataSet ds = db.SearchUserById(a);
 

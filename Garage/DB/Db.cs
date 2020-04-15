@@ -179,8 +179,31 @@ namespace WindowsFormsApplication1
            
             return ds;
         }
-       }
+
+        public DataSet GetAllClients()
+        {
+            DataSet ds = new DataSet();
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                //Teacher מחרוזת המגדירה שאילתה שמחזירה את כל המורים מטבלת 
+                cmd.CommandText = "select * from Clients";
+                //ביצוע ההתחברות למסד הנתונים
+                cmd.Connection = cnn;
+                //DataSet ובאמצעותה נבנה DataSet מחלקה המגשרת בין מסד הנתונים לבין ההעתק שנמצא בזכרון 
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                //open-close היא מבצעת פתיחה וסגירה התחברות DataSet פעולה הטוענת הנתונים לזכרון
+                da.Fill(ds);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return ds;
+        }
+
     }
+}
 
 
    

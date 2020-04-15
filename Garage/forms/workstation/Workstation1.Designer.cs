@@ -66,6 +66,7 @@
             this.label2.Size = new System.Drawing.Size(105, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Remove";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -98,11 +99,12 @@
             this.label5.Size = new System.Drawing.Size(96, 31);
             this.label5.TabIndex = 4;
             this.label5.Text = "Update";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(122, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(126, 40);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

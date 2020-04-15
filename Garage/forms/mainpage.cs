@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using WindowsFormsApplication1.forms.Client;
 
 namespace WindowsFormsApplication1
 {
@@ -61,7 +62,7 @@ namespace WindowsFormsApplication1
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            CustomerForm1 frm = new CustomerForm1(_permi);
+            Clients frm = new Clients();
             frm.Show();
         }
 
@@ -87,6 +88,16 @@ namespace WindowsFormsApplication1
             }
             UserForm frm = new UserForm(_permi);
             frm.Show();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
