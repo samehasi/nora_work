@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="appliance.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="DB\DbUser.cs" />
     <Compile Include="DB\DbExercise.cs" />
     <Compile Include="DB\DbOrder.cs" />

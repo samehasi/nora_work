@@ -34,12 +34,14 @@ namespace WindowsFormsApplication1.forms.Client
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            RemoveClient frm = new RemoveClient();
+            frm.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            AddClient frm = new AddClient();
+            frm.Show();
         }
 
         private void label5_Click(object sender, EventArgs e)

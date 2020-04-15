@@ -57,9 +57,9 @@
             this.Floor.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Floor.Location = new System.Drawing.Point(203, 300);
             this.Floor.Name = "Floor";
-            this.Floor.Size = new System.Drawing.Size(71, 25);
+            this.Floor.Size = new System.Drawing.Size(80, 25);
             this.Floor.TabIndex = 22;
-            this.Floor.Text = "Floor";
+            this.Floor.Text = "Phone";
             // 
             // textBox4
             // 
@@ -103,6 +103,7 @@
             this.button2.Size = new System.Drawing.Size(75, 62);
             this.button2.TabIndex = 16;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -113,6 +114,7 @@
             this.button1.Size = new System.Drawing.Size(75, 62);
             this.button1.TabIndex = 15;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -120,9 +122,9 @@
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(203, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 25);
+            this.label4.Size = new System.Drawing.Size(132, 25);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Name";
+            this.label4.Text = "First Name";
             // 
             // label3
             // 
@@ -130,9 +132,9 @@
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(203, 167);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 25);
+            this.label3.Size = new System.Drawing.Size(126, 25);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Amount";
+            this.label3.Text = "Last Name";
             // 
             // label2
             // 
@@ -140,9 +142,9 @@
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(203, 241);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 25);
+            this.label2.Size = new System.Drawing.Size(95, 25);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Place";
+            this.label2.Text = "Address";
             // 
             // label1
             // 
@@ -150,9 +152,9 @@
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(203, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 25);
+            this.label1.Size = new System.Drawing.Size(109, 25);
             this.label1.TabIndex = 11;
-            this.label1.Text = "IdWorkStation";
+            this.label1.Text = "Client Id";
             // 
             // AddClient
             // 

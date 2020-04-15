@@ -70,6 +70,13 @@ namespace WindowsFormsApplication1
             return dt;
         }
 
+
+        public void InsertClient(Client w)
+        {
+            string SqlStr = string.Format("insert into Clients (ClientId,FirstName,LastName,Address,Phone)values({0},'{1}','{2}','{3}','{4}')", w.Id, w.FirstName, w.LastName, w.Address, w.Phone);
+            //ביצוע עדכון למסד הנתונים לאחר השינוי
+            InsDelUpd(SqlStr);
+        }
         public void InsertTeacher(WorkStation w)
         {
             string SqlStr = string.Format("insert into WorkStation (IdWorkStation,name,Amount,Place,Floor)values({0},'{1}',{2},'{3}','{4}')",w.idworkstation,w.name,w.amount,w.place,w.floor);
@@ -81,7 +88,11 @@ namespace WindowsFormsApplication1
             string SqlStr = string.Format("delete  from WorkStation where idworkstation={0}", w.idworkstation);
             InsDelUpd(SqlStr);
         }
-       
+        public void DeleteClient(Client w)
+        {
+            string SqlStr = string.Format("delete  from Clients where ClientId={0}", w.Id);
+            InsDelUpd(SqlStr);
+        }
         public DataSet GetworkstaionInfo(WorkStation w)
         {
             DataSet ds = new DataSet();
@@ -102,8 +113,19 @@ namespace WindowsFormsApplication1
                 return true;
         }
 
+        public bool ClientExist(int ClientId)
+        {
+            DataSet ds = new DataSet();
+            string str = string.Format("select * from Clients where ClientId={0} ", ClientId);
+            ds = ReturnDS(str);
+            //אם הטבלה לא מכילה אף שורה ז"א מה שחפשנו לא נמצא
+            if (ds.Tables[0].Rows.Count == 0)
+                return false;
+            else
+                return true;
+        }
 
-            public void UpdateTeacher(WorkStation w)
+        public void UpdateTeacher(WorkStation w)
         {
             string SqlStr = string.Format("update workstation  set  name='{0}' ,amount={1}, place='{2}', floor='{3}' where IdWorkStation={4}", w.name, w.amount, w.place, w.floor, w.idworkstation);
             InsDelUpd(SqlStr);
