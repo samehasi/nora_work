@@ -38,6 +38,25 @@ namespace WindowsFormsApplication1.forms.Call
                 w.WorkerId = int.Parse(textBox4.Text);
                 w.ClientId = int.Parse(textBox5.Text);
                 w.Description = textBox6.Text;
+
+
+                DbWorker wdb = new DbWorker();
+                DbClients cdb = new DbClients();
+
+                if (!wdb.WorkerExist(w.WorkerId))
+                {
+                    MessageBox.Show("Invalid Worker", "Error");
+                    return;
+
+                }
+
+                if (!cdb.ClientExist(w.ClientId))
+                {
+                    MessageBox.Show("Invalid Client", "Error");
+                    return;
+
+                }
+
             }
             catch (Exception exception)
             {
