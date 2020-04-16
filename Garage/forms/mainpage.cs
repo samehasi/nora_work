@@ -75,7 +75,7 @@ namespace WindowsFormsApplication1
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            ExerciseForm frm = new ExerciseForm(_permi);
+            forms.Worker.Worker frm = new forms.Worker.Worker();
             frm.Show();
         }
 

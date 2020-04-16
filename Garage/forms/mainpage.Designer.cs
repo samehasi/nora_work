@@ -138,9 +138,9 @@
             this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label8.Location = new System.Drawing.Point(313, 438);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 43);
+            this.label8.Size = new System.Drawing.Size(117, 43);
             this.label8.TabIndex = 8;
-            this.label8.Text = "Exercise";
+            this.label8.Text = "Workers";
             // 
             // label6
             // 

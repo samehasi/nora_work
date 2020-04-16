@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="appliance.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="DB\DbWorker.cs" />
     <Compile Include="DB\DbUser.cs" />
     <Compile Include="DB\DbExercise.cs" />
     <Compile Include="DB\DbOrder.cs" />
@@ -116,6 +117,42 @@
     </Compile>
     <Compile Include="DB\DbAppliance.cs" />
     <Compile Include="DB\DbCustomer.cs" />
+    <Compile Include="forms\Worker\AddWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Worker\AddWorker.Designer.cs">
+      <DependentUpon>AddWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Worker\RemoveWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Worker\RemoveWorker.Designer.cs">
+      <DependentUpon>RemoveWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Worker\SearchWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Worker\SearchWorker.Designer.cs">
+      <DependentUpon>SearchWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Worker\ShowWorkers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Worker\ShowWorkers.Designer.cs">
+      <DependentUpon>ShowWorkers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Worker\UpdateWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Worker\UpdateWorker.Designer.cs">
+      <DependentUpon>UpdateWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Worker\Worker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Worker\Worker.Designer.cs">
+      <DependentUpon>Worker.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\workstation\addworkstation1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +259,7 @@
     <Compile Include="forms\UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Worker.cs" />
     <Compile Include="WorkStation.cs" />
     <EmbeddedResource Include="forms\Client\AddClient.resx">
       <DependentUpon>AddClient.cs</DependentUpon>
@@ -249,6 +287,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Worker\AddWorker.resx">
+      <DependentUpon>AddWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Worker\RemoveWorker.resx">
+      <DependentUpon>RemoveWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Worker\SearchWorker.resx">
+      <DependentUpon>SearchWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Worker\ShowWorkers.resx">
+      <DependentUpon>ShowWorkers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Worker\UpdateWorker.resx">
+      <DependentUpon>UpdateWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Worker\Worker.resx">
+      <DependentUpon>Worker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\workstation\addworkstation1.resx">
       <DependentUpon>addworkstation1.cs</DependentUpon>
@@ -364,6 +420,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
