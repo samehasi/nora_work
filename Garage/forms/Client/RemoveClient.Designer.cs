@@ -55,11 +55,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(106, 57);
+            this.label1.Location = new System.Drawing.Point(221, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 25);
+            this.label1.Size = new System.Drawing.Size(32, 25);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Remove WorkStation";
+            this.label1.Text = "W";
             // 
             // button1
             // 

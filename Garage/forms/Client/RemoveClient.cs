@@ -43,10 +43,6 @@ namespace WindowsFormsApplication1.forms.Client
             {
                 MessageBox.Show(ex.Message, "Error");
             }
-            {
-                Db db1 = new Db();
-                dataGridView1.DataSource = db1.GetAllWorkStation().Tables[0];
-            }
         }
     }
 }

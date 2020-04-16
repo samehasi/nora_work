@@ -105,6 +105,7 @@
             this.button2.Size = new System.Drawing.Size(75, 62);
             this.button2.TabIndex = 28;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -115,6 +116,7 @@
             this.button1.Size = new System.Drawing.Size(75, 62);
             this.button1.TabIndex = 27;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -152,9 +154,10 @@
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(209, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 25);
+            this.label1.Size = new System.Drawing.Size(130, 25);
             this.label1.TabIndex = 23;
-            this.label1.Text = "WorkerId";
+            this.label1.Text = "Worker ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox6
             // 

@@ -15,5 +15,11 @@ namespace WindowsFormsApplication1.forms.Worker
         {
             InitializeComponent();
         }
+         
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DbWorker db = new DbWorker();
+            dataGridView1.DataSource = db.GetAllWorkers().Tables[0];
+        }
     }
 }

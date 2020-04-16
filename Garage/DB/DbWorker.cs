@@ -14,7 +14,9 @@ namespace WindowsFormsApplication1
         private DataSet ds = new DataSet();
         public DbWorker()
         {
-            string path = System.IO.Directory.GetCurrentDirectory() + "\\Garage.MDF";
+            // string path = System.IO.Directory.GetCurrentDirectory() + "\\Garage.MDF";
+             string path = @"d:\work\Nora\workspace\nora_work\Garage\Garage.mdf";
+
             cnn.ConnectionString = string.Format(@"Data Source=.\SQLExpress;Integrated Security=true; 
                                   AttachDbFilename={0};User Instance=true", path);
         }
@@ -65,7 +67,7 @@ namespace WindowsFormsApplication1
             else
                 return true;
         }
-        public DataSet SearchCoachByName(string name)
+        public DataSet SearchWorkerByName(string name)
         {
             DataSet ds = new DataSet();
             SqlCommand cmd = new SqlCommand();
@@ -110,17 +112,17 @@ namespace WindowsFormsApplication1
         }
         public void insertWorker(Worker w)
         {
-            string SqlStr = string.Format("insert into Workers(WorkerId, FirstName, LastName, Address, Phone, BirthDate)values({0},'{1}','{2}','{3}','{4}','{5})", w.WorkerId, w.FirstName, w.LastName, w.Address, w.Phone, w.BirthDate);
+            string SqlStr = string.Format("insert into Workers(WorkerId, FirstName, LastName, Address, Phone, BirthDate)values({0},'{1}','{2}','{3}','{4}','{5}')", w.Id, w.FirstName, w.LastName, w.Address, w.Phone, w.BirthDate);
             InsDelUpd(SqlStr);
         }
         public void DeleteWorker(Worker w)
         {
-            string SqlStr = string.Format("delete  from Workers where WorkerId={0}", w.WorkerId);
+            string SqlStr = string.Format("delete  from Workers where WorkerId={0}", w.Id);
             InsDelUpd(SqlStr);
         }
         public void UpdateWorker(Worker w)
         {
-            string sqlstr = string.Format("update Workers set FirstName='{0}', LastName='{1}' , Address='{2}' ,Phone='{3}' , BirthDate='{4}' where WorkerId={5}", w.FirstName, w.LastName, w.Address, w.Phone,w.BirthDate,w.WorkerId);
+            string sqlstr = string.Format("update Workers set FirstName='{0}', LastName='{1}' , Address='{2}' ,Phone='{3}' , BirthDate='{4}' where WorkerId={5}", w.FirstName, w.LastName, w.Address, w.Phone,w.BirthDate,w.Id);
 
             InsDelUpd(sqlstr);
         }
@@ -161,6 +163,26 @@ namespace WindowsFormsApplication1
                 cnn.Close();
             }
 
+        }
+
+        public bool WorkerExist(int id)
+        {
+            DataSet ds = new DataSet();
+            string str = string.Format("select * from Workers where WorkerId={0} ", id);
+            ds = ReturnDS(str);
+            //אם הטבלה לא מכילה אף שורה ז"א מה שחפשנו לא נמצא
+            if (ds.Tables[0].Rows.Count == 0)
+                return false;
+            else
+                return true;
+        }
+
+        public DataSet getWorkerInfo(WindowsFormsApplication1.Worker w)
+        {
+            DataSet ds = new DataSet();
+            string SqlStr = string.Format("select * from Workers where WorkerId={0}", w.Id);
+            ds = ReturnDS(SqlStr);
+            return ds;
         }
 
 
