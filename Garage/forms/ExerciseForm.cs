@@ -209,11 +209,11 @@ namespace WindowsFormsApplication1
 
         private void ExerciseForm_Load(object sender, EventArgs e)
         {
-            Db db = new Db();
+            DbClients db = new DbClients();
 
             comboBox1.ValueMember = "IdWorkStation";
             comboBox1.DisplayMember = "name";
-            comboBox1.DataSource = db.GetAllWorkStationdt();
+           // comboBox1.DataSource = db.GetAllWorkStationdt();
 
         }
 

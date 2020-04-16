@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public class Db
+    public class DbClients
     {
         //הגדרת מחלקה להתחברות למסד נתונים
         private SqlConnection cnn = new SqlConnection();
@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         //מחלקה המגדירה כל הטבלאות והקשרים בינהים שיטענו לזיכרון
         private DataSet ds = new DataSet();
         //Constractor
-        public Db()
+        public DbClients()
         {
 
             //הגדרת מחרוזת התחברות למסד הנתונים שכוללת מיקום מסד נתונים וסוג של מסד נתונים
@@ -29,46 +29,6 @@ namespace WindowsFormsApplication1
 
         }
 
-        public DataSet GetAllWorkStation()
-        {
-            DataSet ds = new DataSet();
-            SqlCommand cmd = new SqlCommand();
-            try
-            {
-                //Teacher מחרוזת המגדירה שאילתה שמחזירה את כל המורים מטבלת 
-                cmd.CommandText = "select * from WorkStation";
-                //ביצוע ההתחברות למסד הנתונים
-                cmd.Connection = cnn;
-                //DataSet ובאמצעותה נבנה DataSet מחלקה המגשרת בין מסד הנתונים לבין ההעתק שנמצא בזכרון 
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                //open-close היא מבצעת פתיחה וסגירה התחברות DataSet פעולה הטוענת הנתונים לזכרון
-                da.Fill(ds);
-            }                                                                   
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            return ds;
-        }
-
-        public DataTable GetAllWorkStationdt()
-        {
-            DataTable dt = new DataTable("WorkStation");
-            SqlCommand cmd = new SqlCommand();
-            try
-            {
-                cmd.CommandText = "select * from [WorkStation]";
-                cmd.Connection = cnn;
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally { cnn.Close(); }
-            return dt;
-        }
 
 
         public void InsertClient(Client w)
@@ -77,29 +37,14 @@ namespace WindowsFormsApplication1
             //ביצוע עדכון למסד הנתונים לאחר השינוי
             InsDelUpd(SqlStr);
         }
-        public void InsertTeacher(WorkStation w)
-        {
-            string SqlStr = string.Format("insert into WorkStation (IdWorkStation,name,Amount,Place,Floor)values({0},'{1}',{2},'{3}','{4}')",w.idworkstation,w.name,w.amount,w.place,w.floor);
-            //ביצוע עדכון למסד הנתונים לאחר השינוי
-            InsDelUpd(SqlStr);
-        }
-        public void DeleteWorkStation(WorkStation w)
-        {
-            string SqlStr = string.Format("delete  from WorkStation where idworkstation={0}", w.idworkstation);
-            InsDelUpd(SqlStr);
-        }
+
+
         public void DeleteClient(Client w)
         {
             string SqlStr = string.Format("delete  from Clients where ClientId={0}", w.Id);
             InsDelUpd(SqlStr);
         }
-        public DataSet GetworkstaionInfo(WorkStation w)
-        {
-            DataSet ds = new DataSet();
-            string SqlStr = string.Format("select * from workstation where idworkstation={0}", w.idworkstation);
-            ds = ReturnDS(SqlStr);
-            return ds;
-        }
+
 
         public DataSet GetClientInfo(Client w)
         {
@@ -107,18 +52,6 @@ namespace WindowsFormsApplication1
             string SqlStr = string.Format("select * from Clients where ClientId={0}", w.Id);
             ds = ReturnDS(SqlStr);
             return ds;
-        }
-
-        public bool Found(int IdWorkStation)
-        {
-            DataSet ds = new DataSet();
-            string str = string.Format("select * from workstation where idworkstation={0} ", IdWorkStation);
-            ds = ReturnDS(str);
-            //אם הטבלה לא מכילה אף שורה ז"א מה שחפשנו לא נמצא
-            if (ds.Tables[0].Rows.Count == 0)
-                return false;
-            else
-                return true;
         }
 
         public bool ClientExist(int ClientId)
@@ -131,12 +64,6 @@ namespace WindowsFormsApplication1
                 return false;
             else
                 return true;
-        }
-
-        public void UpdateTeacher(WorkStation w)
-        {
-            string SqlStr = string.Format("update workstation  set  name='{0}' ,amount={1}, place='{2}', floor='{3}' where IdWorkStation={4}", w.name, w.amount, w.place, w.floor, w.idworkstation);
-            InsDelUpd(SqlStr);
         }
 
 
@@ -197,25 +124,6 @@ namespace WindowsFormsApplication1
             return ds;
         }
 
-        //פעולת חיפוש מורה
-        public DataSet SearchWorkStationbycode(int IdWorkStation)
-        {
-            DataSet ds = new DataSet();
-            SqlCommand cmd = new SqlCommand();
-            try
-            {
-                cmd.CommandText = string.Format("select * from WorkStation where IdWorkStation={0}", IdWorkStation);
-                cmd.Connection = cnn;
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(ds);
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-           
-            return ds;
-        }
 
 
 

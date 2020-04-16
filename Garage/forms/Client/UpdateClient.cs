@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1.forms.Client
         private void button3_Click(object sender, EventArgs e)
         {
             WindowsFormsApplication1.Client w = new WindowsFormsApplication1.Client();
-            Db db = new Db();
+            DbClients db = new DbClients();
             DataSet ds = new DataSet();
             try
             {
@@ -69,7 +69,7 @@ namespace WindowsFormsApplication1.forms.Client
         private void button1_Click(object sender, EventArgs e)
         {
             WindowsFormsApplication1.Client w = new WindowsFormsApplication1.Client();
-            Db db = new Db();
+            DbClients db = new DbClients();
             w.Id = int.Parse(textBox1.Text);
             w.FirstName = textBox3.Text;
             w.LastName = textBox2.Text;

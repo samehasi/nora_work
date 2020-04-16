@@ -153,12 +153,6 @@
     <Compile Include="forms\Worker\Worker.Designer.cs">
       <DependentUpon>Worker.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\workstation\addworkstation1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\workstation\addworkstation1.Designer.cs">
-      <DependentUpon>addworkstation1.cs</DependentUpon>
-    </Compile>
     <Compile Include="forms\ApplianceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,45 +166,15 @@
     <Compile Include="forms\CoachForm.Designer.cs">
       <DependentUpon>CoachForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\workstation\RemoveWorkStation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\workstation\RemoveWorkStation.Designer.cs">
-      <DependentUpon>RemoveWorkStation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\workstation\searchworkstation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\workstation\searchworkstation.Designer.cs">
-      <DependentUpon>searchworkstation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\workstation\ShowWorkStation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\workstation\ShowWorkStation.Designer.cs">
-      <DependentUpon>ShowWorkStation.cs</DependentUpon>
-    </Compile>
     <Compile Include="forms\TrainingForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\TrainingForm.Designer.cs">
       <DependentUpon>TrainingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\workstation\UpdateWorkStation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\workstation\UpdateWorkStation.Designer.cs">
-      <DependentUpon>UpdateWorkStation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\workstation\Workstation1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\workstation\Workstation1.Designer.cs">
-      <DependentUpon>Workstation1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Coach.cs" />
     <Compile Include="customer.cs" />
-    <Compile Include="DB\Db.cs" />
+    <Compile Include="DB\DbClients.cs" />
     <Compile Include="Exercise.cs" />
     <Compile Include="Garage.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -306,32 +270,14 @@
     <EmbeddedResource Include="forms\Worker\Worker.resx">
       <DependentUpon>Worker.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\workstation\addworkstation1.resx">
-      <DependentUpon>addworkstation1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="forms\ApplianceForm.resx">
       <DependentUpon>ApplianceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\CoachForm.resx">
       <DependentUpon>CoachForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\workstation\RemoveWorkStation.resx">
-      <DependentUpon>RemoveWorkStation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\workstation\searchworkstation.resx">
-      <DependentUpon>searchworkstation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\workstation\ShowWorkStation.resx">
-      <DependentUpon>ShowWorkStation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="forms\TrainingForm.resx">
       <DependentUpon>TrainingForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\workstation\UpdateWorkStation.resx">
-      <DependentUpon>UpdateWorkStation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\workstation\Workstation1.resx">
-      <DependentUpon>Workstation1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\mainpage.resx">
       <DependentUpon>mainpage.cs</DependentUpon>

@@ -96,8 +96,8 @@ namespace WindowsFormsApplication1
             count = 0;
 
 
-            Db db1 = new Db();
-            comboBox4.DataSource = db1.GetAllWorkStation().Tables[0];
+            DbClients db1 = new DbClients();
+            //comboBox4.DataSource = db1.GetAllWorkStation().Tables[0];
             comboBox4.ValueMember = "IdWorkStation";
             //comboBox4.DisplayMember = "IdWorkstation";
 

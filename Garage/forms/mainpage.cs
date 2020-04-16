@@ -28,15 +28,11 @@ namespace WindowsFormsApplication1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Workstation1 frm = new Workstation1(_permi);
-            frm.Show();
 
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            Workstation1 frm = new Workstation1(_permi);
-            frm.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

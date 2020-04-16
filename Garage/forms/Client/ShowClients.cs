@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1.forms.Client
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Db db = new Db();
+            DbClients db = new DbClients();
             dataGridView1.DataSource = db.GetAllClients().Tables[0];
         }
     }

@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1.forms.Client
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Db db = new Db();
+            DbClients db = new DbClients();
             
             try
             {
