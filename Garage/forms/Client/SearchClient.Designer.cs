@@ -62,9 +62,9 @@
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 20);
+            this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Id Work Station";
+            this.label1.Text = "Client ID";
             // 
             // textBox1
             // 
@@ -91,9 +91,9 @@
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 20);
+            this.label2.Size = new System.Drawing.Size(122, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Name Work Station";
+            this.label2.Text = "Client Name";
             // 
             // button1
             // 
