@@ -62,11 +62,49 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="appliance.cs" />
+    <Compile Include="Call.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="DB\DbCalls.cs" />
     <Compile Include="DB\DbWorker.cs" />
     <Compile Include="DB\DbUser.cs" />
     <Compile Include="DB\DbExercise.cs" />
     <Compile Include="DB\DbOrder.cs" />
+    <Compile Include="forms\Call\AddCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Call\AddCall.Designer.cs">
+      <DependentUpon>AddCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Call\CallForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Call\CallForm.Designer.cs">
+      <DependentUpon>CallForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Call\RemoveCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Call\RemoveCall.Designer.cs">
+      <DependentUpon>RemoveCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Call\SearchCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Call\SearchCall.Designer.cs">
+      <DependentUpon>SearchCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Call\ShowCalls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Call\ShowCalls.Designer.cs">
+      <DependentUpon>ShowCalls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Call\UpdateCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Call\UpdateCall.Designer.cs">
+      <DependentUpon>UpdateCall.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\Client\AddClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +263,24 @@
     </Compile>
     <Compile Include="Worker.cs" />
     <Compile Include="WorkStation.cs" />
+    <EmbeddedResource Include="forms\Call\AddCall.resx">
+      <DependentUpon>AddCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Call\CallForm.resx">
+      <DependentUpon>CallForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Call\RemoveCall.resx">
+      <DependentUpon>RemoveCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Call\SearchCall.resx">
+      <DependentUpon>SearchCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Call\ShowCalls.resx">
+      <DependentUpon>ShowCalls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Call\UpdateCall.resx">
+      <DependentUpon>UpdateCall.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\Client\AddClient.resx">
       <DependentUpon>AddClient.cs</DependentUpon>
     </EmbeddedResource>

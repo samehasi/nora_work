@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using WindowsFormsApplication1.forms.Call;
 using WindowsFormsApplication1.forms.Client;
 
 namespace WindowsFormsApplication1
@@ -94,6 +95,12 @@ namespace WindowsFormsApplication1
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            CallForm f = new CallForm();
+            f.Show();
         }
     }
 }

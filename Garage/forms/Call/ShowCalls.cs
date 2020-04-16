@@ -7,19 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.forms.Worker
+namespace WindowsFormsApplication1.forms.Call
 {
-    public partial class ShowWorkers : Form
+    public partial class ShowCalls : Form
     {
-        public ShowWorkers()
+        public ShowCalls()
         {
             InitializeComponent();
         }
-         
+
         private void button1_Click(object sender, EventArgs e)
         {
-            DbWorker db = new DbWorker();
-            dataGridView1.DataSource = db.GetAllWorkers().Tables[0];
+            DbCalls db = new DbCalls();
+            dataGridView1.DataSource = db.GetAllCalls().Tables[0];
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
