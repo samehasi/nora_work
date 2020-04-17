@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using WindowsFormsApplication1.forms.Call;
 using WindowsFormsApplication1.forms.Car;
 using WindowsFormsApplication1.forms.Client;
+using WindowsFormsApplication1.forms.TreatmentKind;
 
 namespace WindowsFormsApplication1
 {
@@ -78,13 +79,7 @@ namespace WindowsFormsApplication1
 
         private void label9_Click(object sender, EventArgs e)
         {
-            if (this._permi != 1)
-            {
-                MessageBox.Show("you do not have permission to access!!!");
-                return;
-            }
-            UserForm frm = new UserForm(_permi);
-            frm.Show();
+
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -107,6 +102,33 @@ namespace WindowsFormsApplication1
         {
             CarsForm f = new CarsForm();
             f.Show();
+        }
+
+        private void Treatments_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            TreatmentKindForm f = new TreatmentKindForm();
+            f.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            if (this._permi != 1)
+            {
+                MessageBox.Show("you do not have permission to access!!!");
+                return;
+            }
+            UserForm frm = new UserForm(_permi);
+            frm.Show();
         }
     }
 }

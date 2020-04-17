@@ -66,5 +66,10 @@ namespace WindowsFormsApplication1.forms.Call
             db.insertCall(w);
             MessageBox.Show("add workstation Success");
         }
+
+        private void AddCall_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

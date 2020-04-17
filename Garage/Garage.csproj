@@ -67,6 +67,7 @@
     <Compile Include="Client.cs" />
     <Compile Include="DB\DbCalls.cs" />
     <Compile Include="DB\DbCars.cs" />
+    <Compile Include="DB\DbKindTreatment.cs" />
     <Compile Include="DB\DbWorker.cs" />
     <Compile Include="DB\DbUser.cs" />
     <Compile Include="DB\DbExercise.cs" />
@@ -193,6 +194,42 @@
     </Compile>
     <Compile Include="DB\DbAppliance.cs" />
     <Compile Include="DB\DbCustomer.cs" />
+    <Compile Include="forms\TreatmentKind\AddTreatmentKind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TreatmentKind\AddTreatmentKind.Designer.cs">
+      <DependentUpon>AddTreatmentKind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\TreatmentKind\RemoveTreatmentKind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TreatmentKind\RemoveTreatmentKind.Designer.cs">
+      <DependentUpon>RemoveTreatmentKind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\TreatmentKind\SearchTreatmentKind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TreatmentKind\SearchTreatmentKind.Designer.cs">
+      <DependentUpon>SearchTreatmentKind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\TreatmentKind\ShowTreatmentKind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TreatmentKind\ShowTreatmentKind.Designer.cs">
+      <DependentUpon>ShowTreatmentKind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\TreatmentKind\TreatmentKindForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TreatmentKind\TreatmentKindForm.Designer.cs">
+      <DependentUpon>TreatmentKindForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\TreatmentKind\UpdateTreatmentKind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TreatmentKind\UpdateTreatmentKind.Designer.cs">
+      <DependentUpon>UpdateTreatmentKind.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\Worker\AddWorker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +300,7 @@
     <Compile Include="forms\mainpage.Designer.cs">
       <DependentUpon>mainpage.cs</DependentUpon>
     </Compile>
+    <Compile Include="KindTreatment.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="forms\OrderForm.cs">
       <SubType>Form</SubType>
@@ -360,6 +398,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\CustomerForm1.resx">
       <DependentUpon>CustomerForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\TreatmentKind\AddTreatmentKind.resx">
+      <DependentUpon>AddTreatmentKind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\TreatmentKind\RemoveTreatmentKind.resx">
+      <DependentUpon>RemoveTreatmentKind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\TreatmentKind\SearchTreatmentKind.resx">
+      <DependentUpon>SearchTreatmentKind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\TreatmentKind\ShowTreatmentKind.resx">
+      <DependentUpon>ShowTreatmentKind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\TreatmentKind\TreatmentKindForm.resx">
+      <DependentUpon>TreatmentKindForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\TreatmentKind\UpdateTreatmentKind.resx">
+      <DependentUpon>UpdateTreatmentKind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>

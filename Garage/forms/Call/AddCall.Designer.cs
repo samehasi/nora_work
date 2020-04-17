@@ -196,6 +196,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddCall";
             this.Text = "AddCall";
+            this.Load += new System.EventHandler(this.AddCall_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -20,9 +20,8 @@ namespace WindowsFormsApplication1
         public DbClients()
         {
 
-            // string path = System.IO.Directory.GetCurrentDirectory() + "\\Garage.MDF";
-            string path = @"d:\work\Nora\workspace\nora_work\Garage\Garage.mdf";
-
+            //הגדרת מחרוזת התחברות למסד הנתונים שכוללת מיקום מסד נתונים וסוג של מסד נתונים
+            string path = System.IO.Directory.GetCurrentDirectory()+ "\\Garage.MDF";
             cnn.ConnectionString = string.Format(@"Data Source=.\SQLExpress;Integrated Security=true; 
                                   AttachDbFilename={0};User Instance=true", path);
 
