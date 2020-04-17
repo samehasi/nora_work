@@ -46,6 +46,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -53,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -257,6 +260,29 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Calls";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label11.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label11.Location = new System.Drawing.Point(786, 429);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 43);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Cars";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(775, 329);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(128, 97);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 21;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
             // mainpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,6 +290,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1051, 688);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
@@ -291,6 +319,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,5 +344,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

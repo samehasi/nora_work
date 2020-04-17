@@ -63,8 +63,10 @@
   <ItemGroup>
     <Compile Include="appliance.cs" />
     <Compile Include="Call.cs" />
+    <Compile Include="Car.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="DB\DbCalls.cs" />
+    <Compile Include="DB\DbCars.cs" />
     <Compile Include="DB\DbWorker.cs" />
     <Compile Include="DB\DbUser.cs" />
     <Compile Include="DB\DbExercise.cs" />
@@ -104,6 +106,42 @@
     </Compile>
     <Compile Include="forms\Call\UpdateCall.Designer.cs">
       <DependentUpon>UpdateCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Car\AddCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Car\AddCar.Designer.cs">
+      <DependentUpon>AddCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Car\CarsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Car\CarsForm.Designer.cs">
+      <DependentUpon>CarsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Car\RemoveCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Car\RemoveCar.Designer.cs">
+      <DependentUpon>RemoveCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Car\SearchCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Car\SearchCar.Designer.cs">
+      <DependentUpon>SearchCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Car\ShowCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Car\ShowCars.Designer.cs">
+      <DependentUpon>ShowCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Car\UpdateCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Car\UpdateCar.Designer.cs">
+      <DependentUpon>UpdateCar.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\Client\AddClient.cs">
       <SubType>Form</SubType>
@@ -280,6 +318,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Call\UpdateCall.resx">
       <DependentUpon>UpdateCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Car\AddCar.resx">
+      <DependentUpon>AddCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Car\CarsForm.resx">
+      <DependentUpon>CarsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Car\RemoveCar.resx">
+      <DependentUpon>RemoveCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Car\SearchCar.resx">
+      <DependentUpon>SearchCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Car\ShowCars.resx">
+      <DependentUpon>ShowCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Car\UpdateCar.resx">
+      <DependentUpon>UpdateCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Client\AddClient.resx">
       <DependentUpon>AddClient.cs</DependentUpon>

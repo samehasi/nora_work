@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using WindowsFormsApplication1.forms.Call;
+using WindowsFormsApplication1.forms.Car;
 using WindowsFormsApplication1.forms.Client;
 
 namespace WindowsFormsApplication1
@@ -39,8 +40,7 @@ namespace WindowsFormsApplication1
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             OrderForm frm = new OrderForm(_permi);
-             
-             frm.Show();
+            frm.Show();
             
 
         }
@@ -100,6 +100,12 @@ namespace WindowsFormsApplication1
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             CallForm f = new CallForm();
+            f.Show();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            CarsForm f = new CarsForm();
             f.Show();
         }
     }
