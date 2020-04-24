@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1.DB
             finally { cnn.Close(); }
             return ds;
         }
-        public DataSet SearchSuppliersByName(char Name)
+        public DataSet SearchSuppliersByName(string Name)
         {
             DataSet ds = new DataSet();
             SqlCommand cmd = new SqlCommand();
@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1.DB
 
             return ds;
         }
-        public DataSet SearchSuppliersByCompany(char Company)
+        public DataSet SearchSuppliersByCompany(string Company)
         {
             DataSet ds = new DataSet();
             SqlCommand cmd = new SqlCommand();
@@ -76,7 +76,7 @@ namespace WindowsFormsApplication1.DB
             return ds;
         }
 
-        public DataSet SearchSupplierById(char SupplierId)
+        public DataSet SearchSupplierById(string SupplierId)
         {
             DataSet ds = new DataSet();
             SqlCommand cmd = new SqlCommand();
@@ -173,7 +173,7 @@ namespace WindowsFormsApplication1.DB
 
         }
 
-        public bool SupplierExist(char SupplierId)
+        public bool SupplierExist(string SupplierId)
         {
             DataSet ds = new DataSet();
             string str = string.Format("select * from Suppliers where SupplierId={0} ", SupplierId);

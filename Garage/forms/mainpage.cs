@@ -10,6 +10,7 @@ using WindowsFormsApplication1.forms.Call;
 using WindowsFormsApplication1.forms.Car;
 using WindowsFormsApplication1.forms.Client;
 using WindowsFormsApplication1.forms.Suppliers;
+using WindowsFormsApplication1.forms.Treatment;
 using WindowsFormsApplication1.forms.TreatmentKind;
 
 namespace WindowsFormsApplication1
@@ -143,6 +144,12 @@ namespace WindowsFormsApplication1
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox6_Click_1(object sender, EventArgs e)
+        {
+            TreatmentFormcs f = new TreatmentFormcs();
+            f.Show();
         }
     }
 }

@@ -176,6 +176,14 @@ namespace WindowsFormsApplication1
             return ds;
         }
 
+        public DataSet getCarInfo(int id)
+        {
+            DataSet ds = new DataSet();
+            string SqlStr = string.Format("select * from Cars where ProductCode={0}", id);
+            ds = ReturnDS(SqlStr);
+            return ds;
+        }
+
 
     }
 }

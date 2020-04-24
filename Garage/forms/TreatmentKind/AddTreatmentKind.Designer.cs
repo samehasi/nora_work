@@ -86,6 +86,7 @@
             this.label4.Size = new System.Drawing.Size(67, 25);
             this.label4.TabIndex = 54;
             this.label4.Text = "Kind";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 

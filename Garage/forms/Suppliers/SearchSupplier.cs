@@ -87,7 +87,7 @@ namespace WindowsFormsApplication1.forms.Suppliers
             {
 
                 WindowsFormsApplication1.Supplier w = new WindowsFormsApplication1.Supplier();
-                w.SupplierId = char.Parse(textBox1.Text);
+                w.SupplierId = textBox1.Text;
 
                 if (comboBox1.SelectedIndex == 0)
                 {

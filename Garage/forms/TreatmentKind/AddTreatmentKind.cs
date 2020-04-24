@@ -60,5 +60,10 @@ namespace WindowsFormsApplication1.forms.TreatmentKind
             textBox2.Clear();
             textBox3.Clear();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

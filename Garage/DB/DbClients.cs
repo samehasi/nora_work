@@ -54,6 +54,14 @@ namespace WindowsFormsApplication1
             return ds;
         }
 
+        public DataSet GetClientInfo(int id)
+        {
+            DataSet ds = new DataSet();
+            string SqlStr = string.Format("select * from Clients where ClientId={0}", id);
+            ds = ReturnDS(SqlStr);
+            return ds;
+        }
+
         public bool ClientExist(int ClientId)
         {
             DataSet ds = new DataSet();

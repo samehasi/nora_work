@@ -61,14 +61,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="appliance.cs" />
-    <Compile Include="Call.cs" />
-    <Compile Include="Car.cs" />
-    <Compile Include="Client.cs" />
+    <Compile Include="Table_Classes\appliance.cs" />
+    <Compile Include="Table_Classes\Call.cs" />
+    <Compile Include="Table_Classes\Car.cs" />
+    <Compile Include="Table_Classes\Client.cs" />
     <Compile Include="DB\DbCalls.cs" />
     <Compile Include="DB\DbCars.cs" />
     <Compile Include="DB\DbKindTreatment.cs" />
     <Compile Include="DB\DbSupplier.cs" />
+    <Compile Include="DB\DbTreatments.cs" />
     <Compile Include="DB\DbWorker.cs" />
     <Compile Include="DB\DbUser.cs" />
     <Compile Include="DB\DbExercise.cs" />
@@ -267,6 +268,24 @@
     <Compile Include="forms\TreatmentKind\UpdateTreatmentKind.Designer.cs">
       <DependentUpon>UpdateTreatmentKind.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\Treatment\AddTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Treatment\AddTreatment.Designer.cs">
+      <DependentUpon>AddTreatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Treatment\SearchTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Treatment\SearchTreatment.Designer.cs">
+      <DependentUpon>SearchTreatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Treatment\TreatmentFormcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Treatment\TreatmentFormcs.Designer.cs">
+      <DependentUpon>TreatmentFormcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\Worker\AddWorker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,10 +341,10 @@
     <Compile Include="forms\TrainingForm.Designer.cs">
       <DependentUpon>TrainingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Coach.cs" />
-    <Compile Include="customer.cs" />
+    <Compile Include="Table_Classes\Coach.cs" />
+    <Compile Include="Table_Classes\customer.cs" />
     <Compile Include="DB\DbClients.cs" />
-    <Compile Include="Exercise.cs" />
+    <Compile Include="Table_Classes\Exercise.cs" />
     <Compile Include="Garage.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -337,15 +356,16 @@
     <Compile Include="forms\mainpage.Designer.cs">
       <DependentUpon>mainpage.cs</DependentUpon>
     </Compile>
-    <Compile Include="KindTreatment.cs" />
-    <Compile Include="Order.cs" />
+    <Compile Include="Table_Classes\InvoiceDetails.cs" />
+    <Compile Include="Table_Classes\KindTreatment.cs" />
+    <Compile Include="Table_Classes\Order.cs" />
     <Compile Include="forms\OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\OrderForm.Designer.cs">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Table_Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="forms\Form1.cs">
       <SubType>Form</SubType>
@@ -366,17 +386,18 @@
     <Compile Include="ReportCustomer.Designer.cs">
       <DependentUpon>ReportCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Supplier.cs" />
-    <Compile Include="tranning2.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Table_Classes\Supplier.cs" />
+    <Compile Include="Table_Classes\tranning2.cs" />
+    <Compile Include="Table_Classes\Treatment.cs" />
+    <Compile Include="Table_Classes\User.cs" />
     <Compile Include="forms\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Worker.cs" />
-    <Compile Include="WorkStation.cs" />
+    <Compile Include="Table_Classes\Worker.cs" />
+    <Compile Include="Table_Classes\WorkStation.cs" />
     <EmbeddedResource Include="forms\Call\AddCall.resx">
       <DependentUpon>AddCall.cs</DependentUpon>
     </EmbeddedResource>
@@ -472,6 +493,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\TreatmentKind\UpdateTreatmentKind.resx">
       <DependentUpon>UpdateTreatmentKind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Treatment\AddTreatment.resx">
+      <DependentUpon>AddTreatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Treatment\TreatmentFormcs.resx">
+      <DependentUpon>TreatmentFormcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>

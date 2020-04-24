@@ -7,26 +7,26 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1
 {
-    public class DbWorker
+    public class DbTreatments
     {
         private SqlConnection cnn = new SqlConnection();
         private SqlCommand cmd = new SqlCommand();
         private DataSet ds = new DataSet();
-        public DbWorker()
+        public DbTreatments()
         {
             // string path = System.IO.Directory.GetCurrentDirectory() + "\\Garage.MDF";
-             string path = @"d:\work\Nora\workspace\nora_work\Garage\Garage.mdf";
+            string path = @"d:\work\Nora\workspace\nora_work\Garage\Garage.mdf";
 
             cnn.ConnectionString = string.Format(@"Data Source=.\SQLExpress;Integrated Security=true; 
                                   AttachDbFilename={0};User Instance=true", path);
         }
-        public DataSet GetAllWorkers()
+        public DataSet GetAllTreatments()
         {
             DataSet ds = new DataSet();
             SqlCommand cmd = new SqlCommand();
             try
             {
-                cmd.CommandText = "select * from Workers";
+                cmd.CommandText = "select * from Treatments";
                 cmd.Connection = cnn;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(ds);
@@ -38,13 +38,14 @@ namespace WindowsFormsApplication1
             finally { cnn.Close(); }
             return ds;
         }
-        public DataSet SearchWorkerById(int WorkerId)
+
+        public DataSet GetAllInvoices()
         {
             DataSet ds = new DataSet();
             SqlCommand cmd = new SqlCommand();
             try
             {
-                cmd.CommandText = string.Format("select * from Workers where WorkerId={0}", WorkerId);
+                cmd.CommandText = "select * from InvoiceDetails";
                 cmd.Connection = cnn;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(ds);
@@ -53,38 +54,14 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show(ex.Message);
             }
-
+            finally { cnn.Close(); }
             return ds;
         }
-        public bool FoundWorkerByName(string name)
-        {
-            DataSet ds = new DataSet();
-            string str = string.Format("select * from Workers where FirstName='{0}'", name);
-            ds = ReturnDS(str);
-            //אם הטבלה לא מכילה אף שורה ז"א מה שחפשנו לא נמצא
-            if (ds.Tables[0].Rows.Count == 0)
-                return false;
-            else
-                return true;
-        }
-        public DataSet SearchWorkerByName(string name)
-        {
-            DataSet ds = new DataSet();
-            SqlCommand cmd = new SqlCommand();
-            try
-            {
-                cmd.CommandText = string.Format("select * from Workers where (FirstName LIKE '%{0}%' or LastName LIKE '%{0}%' )", name);
-                cmd.Connection = cnn;
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(ds);
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
 
-            return ds;
-        }
+
+
+
+
 
 
         public DataSet ReturnDS(string SqlStr)
@@ -110,27 +87,23 @@ namespace WindowsFormsApplication1
             }
             return ds;
         }
-        public void insertWorker(Worker w)
+        public void insertTreatment(Treatment w)
         {
-            string SqlStr = string.Format("insert into Workers(WorkerId, FirstName, LastName, Address, Phone, BirthDate)values({0},'{1}','{2}','{3}','{4}','{5}')", w.Id, w.FirstName, w.LastName, w.Address, w.Phone, w.BirthDate);
+            string SqlStr = string.Format("insert into Treatments(Idtreatment, IdCustomer, NameCustomer, IdWorker, NameWorker,Time, Date,IdCar,KindCar,Total)values({0},{1},'{2}',{3},'{4}','{5}','{6}',{7},'{8}',{9})", w.Id, w.CustometId, w.CustomerName, w.WorkerId, w.WorkerName, w.Date,w.Time,w.CarId,w.CarKind,w.Total);
             InsDelUpd(SqlStr);
         }
-        public void DeleteWorker(Worker w)
-        {
-            string SqlStr = string.Format("delete  from Workers where WorkerId={0}", w.Id);
-            InsDelUpd(SqlStr);
-        }
-        public void UpdateWorker(Worker w)
-        {
-            string sqlstr = string.Format("update Workers set FirstName='{0}', LastName='{1}' , Address='{2}' ,Phone='{3}' , BirthDate='{4}' where WorkerId={5}", w.FirstName, w.LastName, w.Address, w.Phone,w.BirthDate,w.Id);
 
-            InsDelUpd(sqlstr);
+        public void insertInvoice(WindowsFormsApplication1.InvoiceDetails w)
+        {
+            string SqlStr = string.Format("insert into InvoiceDetails(CodeTreatment, InvoiceNumber, ClientId, Price, Kind)values({0},{1},{2},{3},'{4}')", w.CodeTreatment ,w.InvoiceNumber,w.ClientId,w.Price,w.Kind );
+            InsDelUpd(SqlStr);
         }
-        public bool Found(int wid)
+        public bool TreatmentExist(int TreatmentId)
         {
             DataSet ds = new DataSet();
-            string str = string.Format("select * from Workers where WorkerId={0} ", wid);
+            string str = string.Format("select * from Treatments where Idtreatment={0} ", TreatmentId);
             ds = ReturnDS(str);
+            //אם הטבלה לא מכילה אף שורה ז"א מה שחפשנו לא נמצא
             if (ds.Tables[0].Rows.Count == 0)
                 return false;
             else
@@ -165,30 +138,11 @@ namespace WindowsFormsApplication1
 
         }
 
-        public bool WorkerExist(int id)
-        {
-            DataSet ds = new DataSet();
-            string str = string.Format("select * from Workers where WorkerId={0} ", id);
-            ds = ReturnDS(str);
-            //אם הטבלה לא מכילה אף שורה ז"א מה שחפשנו לא נמצא
-            if (ds.Tables[0].Rows.Count == 0)
-                return false;
-            else
-                return true;
-        }
 
-        public DataSet getWorkerInfo(WindowsFormsApplication1.Worker w)
+        public DataSet getTreatmentInfo(Treatment w)
         {
             DataSet ds = new DataSet();
-            string SqlStr = string.Format("select * from Workers where WorkerId={0}", w.Id);
-            ds = ReturnDS(SqlStr);
-            return ds;
-        }
-
-        public DataSet getWorkerInfo(int id)
-        {
-            DataSet ds = new DataSet();
-            string SqlStr = string.Format("select * from Workers where WorkerId={0}", id);
+            string SqlStr = string.Format("select * from Treatments where Idtreatment={0}", w.Id);
             ds = ReturnDS(SqlStr);
             return ds;
         }
