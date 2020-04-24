@@ -39,5 +39,10 @@ namespace WindowsFormsApplication1.forms.Call
                 MessageBox.Show(ex.Message, "Error");
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

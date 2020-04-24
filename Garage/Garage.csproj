@@ -68,6 +68,7 @@
     <Compile Include="DB\DbCalls.cs" />
     <Compile Include="DB\DbCars.cs" />
     <Compile Include="DB\DbKindTreatment.cs" />
+    <Compile Include="DB\DbSupplier.cs" />
     <Compile Include="DB\DbWorker.cs" />
     <Compile Include="DB\DbUser.cs" />
     <Compile Include="DB\DbExercise.cs" />
@@ -194,6 +195,42 @@
     </Compile>
     <Compile Include="DB\DbAppliance.cs" />
     <Compile Include="DB\DbCustomer.cs" />
+    <Compile Include="forms\Suppliers\AddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Suppliers\AddSupplier.Designer.cs">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Suppliers\RemoveSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Suppliers\RemoveSuppliers.Designer.cs">
+      <DependentUpon>RemoveSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Suppliers\SearchSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Suppliers\SearchSupplier.Designer.cs">
+      <DependentUpon>SearchSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Suppliers\ShowSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Suppliers\ShowSuppliers.Designer.cs">
+      <DependentUpon>ShowSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Suppliers\SupliersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Suppliers\SupliersForm.Designer.cs">
+      <DependentUpon>SupliersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Suppliers\UpdateSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Suppliers\UpdateSuppliers.Designer.cs">
+      <DependentUpon>UpdateSuppliers.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\TreatmentKind\AddTreatmentKind.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +366,7 @@
     <Compile Include="ReportCustomer.Designer.cs">
       <DependentUpon>ReportCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Supplier.cs" />
     <Compile Include="tranning2.cs" />
     <Compile Include="User.cs" />
     <Compile Include="forms\UserForm.cs">
@@ -398,6 +436,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\CustomerForm1.resx">
       <DependentUpon>CustomerForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Suppliers\AddSupplier.resx">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Suppliers\RemoveSuppliers.resx">
+      <DependentUpon>RemoveSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Suppliers\SearchSupplier.resx">
+      <DependentUpon>SearchSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Suppliers\ShowSuppliers.resx">
+      <DependentUpon>ShowSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Suppliers\SupliersForm.resx">
+      <DependentUpon>SupliersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Suppliers\UpdateSuppliers.resx">
+      <DependentUpon>UpdateSuppliers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\TreatmentKind\AddTreatmentKind.resx">
       <DependentUpon>AddTreatmentKind.cs</DependentUpon>

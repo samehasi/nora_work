@@ -85,5 +85,10 @@ namespace WindowsFormsApplication1.forms.Call
             textBox5.Clear();
             textBox6.Clear();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

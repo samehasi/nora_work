@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using WindowsFormsApplication1.forms.Call;
 using WindowsFormsApplication1.forms.Car;
 using WindowsFormsApplication1.forms.Client;
+using WindowsFormsApplication1.forms.Suppliers;
 using WindowsFormsApplication1.forms.TreatmentKind;
 
 namespace WindowsFormsApplication1
@@ -129,6 +130,19 @@ namespace WindowsFormsApplication1
             }
             UserForm frm = new UserForm(_permi);
             frm.Show();
+        }
+
+        private void pictureBox3_Click_3(object sender, EventArgs e)
+        {
+            SupliersForm f = new SupliersForm();
+            f.Show();
+           
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
