@@ -32,46 +32,15 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-        }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            OrderForm frm = new OrderForm(_permi);
-            frm.Show();
-            
 
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            CoachForm frm = new CoachForm(_permi);
-            frm.Show();
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            ApplianceForm frm = new ApplianceForm(_permi);
-            frm.Show();
-        }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             Clients frm = new Clients();
             frm.Show();
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            training frm = new training(_permi);
-            frm.Show();
-
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -86,20 +55,10 @@ namespace WindowsFormsApplication1
             frm.Show();
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
+ 
 
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
@@ -124,10 +83,6 @@ namespace WindowsFormsApplication1
             f.Show();
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {

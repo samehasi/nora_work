@@ -78,8 +78,6 @@
     <Compile Include="DB\DbTreatments.cs" />
     <Compile Include="DB\DbWorker.cs" />
     <Compile Include="DB\DbUser.cs" />
-    <Compile Include="DB\DbExercise.cs" />
-    <Compile Include="DB\DbOrder.cs" />
     <Compile Include="forms\Call\AddCall.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,20 +186,6 @@
     <Compile Include="forms\Client\UpdateClient.Designer.cs">
       <DependentUpon>UpdateClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\ExerciseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\ExerciseForm.Designer.cs">
-      <DependentUpon>ExerciseForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\CustomerForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\CustomerForm1.Designer.cs">
-      <DependentUpon>CustomerForm1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DB\DbAppliance.cs" />
-    <Compile Include="DB\DbCustomer.cs" />
     <Compile Include="forms\Suppliers\AddSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,25 +312,6 @@
     <Compile Include="forms\Worker\Worker.Designer.cs">
       <DependentUpon>Worker.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\ApplianceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\ApplianceForm.Designer.cs">
-      <DependentUpon>ApplianceForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DB\DbCoach.cs" />
-    <Compile Include="forms\CoachForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\CoachForm.Designer.cs">
-      <DependentUpon>CoachForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\TrainingForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\TrainingForm.Designer.cs">
-      <DependentUpon>TrainingForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Table_Classes\Coach.cs" />
     <Compile Include="Table_Classes\customer.cs" />
     <Compile Include="DB\DbClients.cs" />
@@ -365,12 +330,6 @@
     <Compile Include="Table_Classes\InvoiceDetails.cs" />
     <Compile Include="Table_Classes\KindTreatment.cs" />
     <Compile Include="Table_Classes\Order.cs" />
-    <Compile Include="forms\OrderForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\OrderForm.Designer.cs">
-      <DependentUpon>OrderForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Table_Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="forms\Form1.cs">
@@ -378,19 +337,6 @@
     </Compile>
     <Compile Include="forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DB\TrainingDb.cs" />
-    <Compile Include="ReportCoach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportCoach.Designer.cs">
-      <DependentUpon>ReportCoach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReportCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportCustomer.Designer.cs">
-      <DependentUpon>ReportCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Table_Classes\Supplier.cs" />
     <Compile Include="Table_Classes\tranning2.cs" />
@@ -457,12 +403,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Client\UpdateClient.resx">
       <DependentUpon>UpdateClient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\ExerciseForm.resx">
-      <DependentUpon>ExerciseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\CustomerForm1.resx">
-      <DependentUpon>CustomerForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MgmtQueries.resx">
       <DependentUpon>MgmtQueries.cs</DependentUpon>
@@ -533,20 +473,8 @@
     <EmbeddedResource Include="forms\Worker\Worker.resx">
       <DependentUpon>Worker.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\ApplianceForm.resx">
-      <DependentUpon>ApplianceForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\CoachForm.resx">
-      <DependentUpon>CoachForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\TrainingForm.resx">
-      <DependentUpon>TrainingForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="forms\mainpage.resx">
       <DependentUpon>mainpage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\OrderForm.resx">
-      <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -559,12 +487,6 @@
     </Compile>
     <EmbeddedResource Include="forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportCoach.resx">
-      <DependentUpon>ReportCoach.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportCustomer.resx">
-      <DependentUpon>ReportCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Garage.xsc">

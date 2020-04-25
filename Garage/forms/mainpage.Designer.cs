@@ -118,19 +118,7 @@
             this.pictureBox5.TabIndex = 14;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Black;
-            this.label9.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label9.Location = new System.Drawing.Point(532, 509);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(238, 43);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "User Management";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+
             // 
             // label10
             // 
