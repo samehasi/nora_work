@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
             SqlCommand cmd = new SqlCommand();
             try
             {
-                cmd.CommandText = "select * from [user]";
+                cmd.CommandText = "select * from [Users]";
                 cmd.Connection = cnn;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(ds);
@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1
             SqlCommand cmd = new SqlCommand();
             try
             {
-                cmd.CommandText = "select * from [user]";
+                cmd.CommandText = "select * from [Users]";
                 cmd.Connection = cnn;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
@@ -56,13 +56,13 @@ namespace WindowsFormsApplication1
             return dt;
         }
 
-        public DataSet SearchUserById(int idusr)
+        public DataSet SearchUserById(int UserId)
         {
             DataSet ds = new DataSet();
             SqlCommand cmd = new SqlCommand();
             try
             {
-                cmd.CommandText = string.Format("select * from [user] where idusr={0}", idusr);
+                cmd.CommandText = string.Format("select * from [Users] where UserId={0}", UserId);
                 cmd.Connection = cnn;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(ds);
@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1
             SqlCommand cmd = new SqlCommand();
             try
             {
-                cmd.CommandText = string.Format("select * from [user] where firstname='{0}'", firstname);
+                cmd.CommandText = string.Format("select * from [Users] where firstname='{0}'", firstname);
                 cmd.Connection = cnn;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(ds);
@@ -124,23 +124,23 @@ namespace WindowsFormsApplication1
         }
         public void insertUser(User u)
         {
-            string SqlStr = string.Format("insert into [user] (idusr,Password,firstname,lastname,phone ,datestart,roleusr)values({0},'{1}','{2}','{3}','{4}','{5}',{6})", u.Idusr, u.Password, u.Firstname, u.Lastname, u.Phone, u.Datestart, u.Roleusr);
+            string SqlStr = string.Format("insert into [Users] (UserId,Password,Level)values({0},'{1}','{2}')", u.UserId, u.Password, u.Level);
             InsDelUpd(SqlStr);
         }
         public void DeleteUser(User u)
         {
-            string SqlStr = string.Format("delete  from [user] where idusr={0}", u.Idusr);
+            string SqlStr = string.Format("delete  from [Users] where UserId={0}", u.UserId);
             InsDelUpd(SqlStr);
         }
         public void UpdateUser(User u)
         {
-            string sqlstr = string.Format("update [user] set firstname='{0}',lastname='{1}',phone='{2}',datestart='{3}',roleusr={4},Password='{5}' where idusr={6}", u.Firstname, u.Lastname, u.Phone, u.Datestart, u.Roleusr, u.Password, u.Idusr);
+            string sqlstr = string.Format("update [Users] set Level={0},Password='{1}' where UserId={2}", u.Level, u.Password, u.UserId);
             InsDelUpd(sqlstr);
         }
-        public bool Found(int idusr)
+        public bool Found(int UserId)
         {
             DataSet ds = new DataSet();
-            string str = string.Format("select * from [user] where idusr={0} ", idusr);
+            string str = string.Format("select * from [Users] where UserId={0} ", UserId);
             ds = ReturnDS(str);
             if (ds.Tables[0].Rows.Count == 0)
                 return false;
@@ -151,7 +151,7 @@ namespace WindowsFormsApplication1
         public bool FoundFname(string firstname)
         {
             DataSet ds = new DataSet();
-            string str = string.Format("select * from [user] where firstname='{0}' ", firstname);
+            string str = string.Format("select * from [Users] where firstname='{0}' ", firstname);
             ds = ReturnDS(str);
             if (ds.Tables[0].Rows.Count == 0)
                 return false;
@@ -189,10 +189,10 @@ namespace WindowsFormsApplication1
         }
 
         
-        public bool ChkeLogin(int idusr, string password)
+        public bool ChkeLogin(int UserId, string password)
         {
             DataSet ds = new DataSet();
-            string str = string.Format("select * from [user] where idusr={0} and Password='{1}' ", idusr,password);
+            string str = string.Format("select * from [Users] where UserId={0} and Password='{1}' ", UserId,password);
             ds = ReturnDS(str);
             if (ds.Tables[0].Rows.Count == 0)
                 return false;

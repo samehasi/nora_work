@@ -21,9 +21,6 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
 
-            textBox1.Text = "1";
-            textBox2.Text = "1";
-            /*
             if (textBox1.Text == "")
             {
                 SystemSounds.Beep.Play(); 
@@ -37,7 +34,6 @@ namespace WindowsFormsApplication1
                 return;
             }
             
-    */
             DbUser db = new DbUser();
             int a = int.Parse(textBox1.Text);
             string b = (textBox2.Text);
@@ -54,19 +50,16 @@ namespace WindowsFormsApplication1
             }
 
 
-            //if (db.ChkeLogin(a, b))
-            if (true)
+            if (db.ChkeLogin(a, b))
             {
+                
                 DataSet ds = db.SearchUserById(a);
 
-                int permi = (int)(ds.Tables[0].Rows[0]["roleusr"]);
+                int permi = (int)(ds.Tables[0].Rows[0]["Level"]);
 
-                string uname =  (string)(ds.Tables[0].Rows[0]["firstname"]);
-                uname = uname.Trim() + " " +(string)(ds.Tables[0].Rows[0]["lastname"]);
-                uname = uname.Trim();
                 SystemSounds.Asterisk.Play();
                 
-                mainpage frm = new mainpage(permi, uname);
+                mainpage frm = new mainpage(permi, "user");
                 
 
                 this.Visible = false;

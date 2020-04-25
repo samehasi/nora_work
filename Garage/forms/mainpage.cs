@@ -76,6 +76,12 @@ namespace WindowsFormsApplication1
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
+            if (this._permi > 2)
+            {
+                MessageBox.Show("Access Denied");
+                return;
+            }
+
             forms.Worker.Worker frm = new forms.Worker.Worker();
             frm.Show();
         }
@@ -127,7 +133,7 @@ namespace WindowsFormsApplication1
         {
             if (this._permi != 1)
             {
-                MessageBox.Show("you do not have permission to access!!!");
+                MessageBox.Show("Access Denied");
                 return;
             }
             UserForm frm = new UserForm(_permi);
@@ -155,6 +161,11 @@ namespace WindowsFormsApplication1
 
         private void pictureBox7_Click_1(object sender, EventArgs e)
         {
+            if(_permi > 1)
+            {
+                MessageBox.Show("Access Denied");
+                return;
+            }
             MgmtQueries f = new MgmtQueries();
             f.Show();
         }

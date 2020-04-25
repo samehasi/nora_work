@@ -36,15 +36,11 @@ namespace WindowsFormsApplication1
         private void DisplayRecord(int i)
         {
             dataGridView1.CurrentCell = dataGridView1.Rows[i].Cells[0];
-            textBox1.Text = dt.Rows[i]["idusr"].ToString();
+            textBox1.Text = dt.Rows[i]["UserId"].ToString();
 
             textBox2.Text = dt.Rows[i]["Password"].ToString();
-            textBox6.Text = dt.Rows[i]["firstname"].ToString();
-            textBox8.Text = dt.Rows[i]["lastname"].ToString();
-            textBox9.Text = dt.Rows[i]["phone"].ToString();
-            dateTimePicker1.Text = dt.Rows[i]["datestart"].ToString();
 
-            int a = int.Parse(dt.Rows[i]["roleusr"].ToString());
+            int a = int.Parse(dt.Rows[i]["Level"].ToString());
             switch (a)
             {
                 case 1:
@@ -96,9 +92,9 @@ namespace WindowsFormsApplication1
             
             User u = new User();
             DbUser db = new DbUser();
-            u.Idusr = int.Parse(textBox1.Text);
+            u.UserId = int.Parse(textBox1.Text);
 
-            if (db.Found(u.Idusr) == false)
+            if (db.Found(u.UserId) == false)
             {
                 if (comboBox1.SelectedIndex.ToString() == "-1")
                 {
@@ -108,11 +104,7 @@ namespace WindowsFormsApplication1
                 }
                 int aa = int.Parse(comboBox1.SelectedIndex.ToString());
                 u.Password = textBox2.Text;
-                u.Firstname = textBox6.Text;
-                u.Lastname = textBox8.Text;
-                u.Phone = textBox9.Text;
-                u.Datestart = dateTimePicker1.Text;
-                u.Roleusr = aa + 1;
+                u.Level = aa + 1;
                 db.insertUser(u);
                 DisplayDataGridView();
                 MessageBox.Show("add user successfully !!");
@@ -130,9 +122,9 @@ namespace WindowsFormsApplication1
             {
             User u = new User();
             DbUser db = new DbUser();
-            u.Idusr = int.Parse(textBox1.Text);
+            u.UserId = int.Parse(textBox1.Text);
 
-            if (db.Found(u.Idusr) == true)
+            if (db.Found(u.UserId) == true)
             {
                 if (comboBox1.SelectedIndex.ToString() == "-1")
                 {
@@ -141,11 +133,7 @@ namespace WindowsFormsApplication1
                 }
                 int aa = int.Parse(comboBox1.SelectedIndex.ToString());
                 u.Password = textBox2.Text;
-                u.Firstname = textBox6.Text;
-                u.Lastname = textBox8.Text;
-                u.Phone = textBox9.Text;
-                u.Datestart = dateTimePicker1.Text;
-                u.Roleusr = aa + 1;
+                u.Level = aa + 1;
                 db.UpdateUser(u);
                 DisplayDataGridView();
                     MessageBox.Show("update user", "User");
@@ -165,9 +153,9 @@ namespace WindowsFormsApplication1
             {
                 User u = new User();
             DbUser db = new DbUser();
-            u.Idusr = int.Parse(textBox1.Text);
+            u.UserId = int.Parse(textBox1.Text);
 
-            if (db.Found(u.Idusr) == true)
+            if (db.Found(u.UserId) == true)
             {
 
                 db.DeleteUser(u);
@@ -208,40 +196,32 @@ namespace WindowsFormsApplication1
 
         private void button7_Click(object sender, EventArgs e)
         {
-            User u = new User();
-            DbUser db = new DbUser();
-            if (comboBox3.SelectedIndex == 0)
+            try
             {
-                //by id
-                u.Idusr = int.Parse(textBox5.Text);
-                if (db.Found(u.Idusr) == true)
+                User u = new User();
+                DbUser db = new DbUser();
+                if (comboBox3.SelectedIndex == 0)
                 {
-                    dataGridView1.DataSource = db.SearchUserById(u.Idusr).Tables[0];
+                    //by id
+                    u.UserId = int.Parse(textBox5.Text);
+                    if (db.Found(u.UserId) == true)
+                    {
+                        dataGridView1.DataSource = db.SearchUserById(u.UserId).Tables[0];
+                    }
+                    else
+                    {
+                        textBox5.Text = "NOT FOUND";
+                        DisplayDataGridView();
+                    }
+
                 }
-                else
-                {
-                    textBox5.Text = "NOT FOUND";
-                    DisplayDataGridView();
-                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Invalid Parameters");
+                return;
 
             }
 
-            if (comboBox3.SelectedIndex == 1)
-            {
-                //by FirstName
-                u.Firstname= textBox5.Text;
-
-                if (db.FoundFname(u.Firstname) == true)
-                {
-                    dataGridView1.DataSource = db.SearchFirstNmae(u.Firstname).Tables[0];
-                }
-                else
-                {
-                    textBox5.Text = "NOT FOUND";
-                    DisplayDataGridView();
-                }
-
-            }
         }
 
        
