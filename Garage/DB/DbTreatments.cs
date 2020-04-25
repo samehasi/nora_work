@@ -147,6 +147,82 @@ namespace WindowsFormsApplication1
             return ds;
         }
 
+        public DataSet searchTreatmentById(int id)
+        {
+            DataSet ds = new DataSet();
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cmd.CommandText = string.Format("select * from Treatments  where Idtreatment={0}", id);
+                cmd.Connection = cnn;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(ds);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return ds;
+        }
+
+        public DataSet searchTreatmentByClientName(string name)
+        {
+            DataSet ds = new DataSet();
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cmd.CommandText = string.Format("select * from Treatments where (NameCustomer LIKE '%{0}%' )", name);
+                cmd.Connection = cnn;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(ds);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return ds;
+        }
+
+        public DataSet searchTreatmentByCarId(int id)
+        {
+            DataSet ds = new DataSet();
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cmd.CommandText = string.Format("select * from Treatments  where IdCar={0}", id);
+                cmd.Connection = cnn;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(ds);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return ds;
+        }
+
+
+        public DataSet searchInvoiceByTreatmentId(int id)
+        {
+            DataSet ds = new DataSet();
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cmd.CommandText = string.Format("select * from InvoiceDetails  where CodeTreatment={0}", id);
+                cmd.Connection = cnn;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(ds);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return ds;
+        }
 
     }
 }

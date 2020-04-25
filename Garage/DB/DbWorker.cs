@@ -38,6 +38,26 @@ namespace WindowsFormsApplication1
             finally { cnn.Close(); }
             return ds;
         }
+
+        public DataSet GetAllWorkersSorted(string sortedBy)
+        {
+            DataSet ds = new DataSet();
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cmd.CommandText = string.Format("select * from Workers ORDER BY {0} ASC", sortedBy);
+                cmd.Connection = cnn;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(ds);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { cnn.Close(); }
+            return ds;
+        }
+
         public DataSet SearchWorkerById(int WorkerId)
         {
             DataSet ds = new DataSet();
@@ -67,6 +87,49 @@ namespace WindowsFormsApplication1
             else
                 return true;
         }
+
+        public DataSet FoundWorkerNameStartsWith(string prefix)
+        {
+            DataSet ds = new DataSet();
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cmd.CommandText = string.Format("select * from Workers where (FirstName LIKE '{0}%')", prefix);
+                cmd.Connection = cnn;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(ds);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return ds;
+
+        }
+
+
+        public DataSet FoundWorkerbyAddress(string prefix)
+        {
+            DataSet ds = new DataSet();
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cmd.CommandText = string.Format("select * from Workers where (Address LIKE '{0}%')", prefix);
+                cmd.Connection = cnn;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(ds);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return ds;
+
+        }
+
+
         public DataSet SearchWorkerByName(string name)
         {
             DataSet ds = new DataSet();

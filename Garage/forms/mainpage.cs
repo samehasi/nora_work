@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using WindowsFormsApplication1.forms;
 using WindowsFormsApplication1.forms.Call;
 using WindowsFormsApplication1.forms.Car;
 using WindowsFormsApplication1.forms.Client;
@@ -149,6 +150,12 @@ namespace WindowsFormsApplication1
         private void pictureBox6_Click_1(object sender, EventArgs e)
         {
             TreatmentFormcs f = new TreatmentFormcs();
+            f.Show();
+        }
+
+        private void pictureBox7_Click_1(object sender, EventArgs e)
+        {
+            MgmtQueries f = new MgmtQueries();
             f.Show();
         }
     }

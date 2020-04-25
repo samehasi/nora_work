@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\MgmtQueries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\MgmtQueries.Designer.cs">
+      <DependentUpon>MgmtQueries.cs</DependentUpon>
+    </Compile>
     <Compile Include="Table_Classes\appliance.cs" />
     <Compile Include="Table_Classes\Call.cs" />
     <Compile Include="Table_Classes\Car.cs" />
@@ -458,6 +464,9 @@
     <EmbeddedResource Include="forms\CustomerForm1.resx">
       <DependentUpon>CustomerForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\MgmtQueries.resx">
+      <DependentUpon>MgmtQueries.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\Suppliers\AddSupplier.resx">
       <DependentUpon>AddSupplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -496,6 +505,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Treatment\AddTreatment.resx">
       <DependentUpon>AddTreatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Treatment\SearchTreatment.resx">
+      <DependentUpon>SearchTreatment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Treatment\TreatmentFormcs.resx">
       <DependentUpon>TreatmentFormcs.cs</DependentUpon>

@@ -21,5 +21,11 @@ namespace WindowsFormsApplication1.forms.Treatment
             AddTreatment f = new AddTreatment();
             f.Show();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            SearchTreatment f = new SearchTreatment();
+            f.Show();
+        }
     }
 }
